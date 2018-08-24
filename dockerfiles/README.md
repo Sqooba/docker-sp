@@ -32,13 +32,13 @@ and extract it to `<DOCKERFILE_HOME>/base/files`. <br>
 
 The list of required client jars are;
 
-- kafka_2.11-0.10.2.1.jar
-- kafka-clients-0.10.2.1.jar
+- kafka_2.11-0.10.0.0.jar
+- kafka-clients-0.10.0.0.jar
 - metrics-core-2.2.0.jar
 - scala-library-2.11.8.jar
 - scala-parser-combinators_2.11-1.0.4.jar
-- zkclient-0.10.jar
-- zookeeper-3.4.9.jar
+- zkclient-0.8.jar
+- zookeeper-3.4.6.jar
 
 > Use the `jartobundle.sh` script found it `wso2sp-4.2.0/bin` as shown below; note that you will have to run this command for each jar mentioned above
 
