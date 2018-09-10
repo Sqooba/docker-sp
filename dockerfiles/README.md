@@ -46,13 +46,16 @@ The list of required client jars are;
   ./wso2sp-4.2.0/bin/jartobundle.sh path/to/kafka/client/jar <DOCKERFILE_HOME>/base/files
   ```
 
+##### 5. Replace buggy json mapper
 
-##### 4. Build the base Docker image.
+To fix [this bug](https://github.com/wso2-extensions/siddhi-map-json/issues/36) you need to download a version of the artifact `siddhi-map-json` that is at least higher than 4.0.23 (from 4.0.24 included is fine). You can download the jar for version 4.0.29 [here](http://central.maven.org/maven2/org/wso2/extension/siddhi/map/json/siddhi-map-json/4.0.29/siddhi-map-json-4.0.29.jar). Replace `<DOCKERFILE_HOME>/base/files/wso2sp-4.2.0/lib/siddhi-map-json-4.0.23.jar` with the jar you downloaded.  
+
+##### 6. Build the base Docker image.
 - For base, navigate to `<DOCKERFILE_HOME>/base` directory. <br>
   Execute `docker build` command as shown below.
     + `docker build -t wso2sp-base:4.2.0 .`
         
-##### 5. Build Docker images specific to each profile.
+##### 7. Build Docker images specific to each profile.
 - For Dashboard, navigate to `<DOCKERFILE_HOME>/dashboard` directory. <br>
   Execute `docker build` command as shown below. 
     + `docker build -t wso2sp-dashboard:4.2.0 .`
