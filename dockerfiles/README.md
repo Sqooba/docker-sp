@@ -21,7 +21,7 @@ WSO2 Stream Processor 4.3.0, namely : <br>
 - Download [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 and extract it to `<DOCKERFILE_HOME>/base/files`.
 - Download [WSO2 Stream Processor 4.3.0 distribution](https://github.com/wso2/product-sp/releases)
-and extract it to `<DOCKERFILE_HOME>/base/files/4.3.0`. <br>
+and extract it to `<DOCKERFILE_HOME>/base/files`. <br>
 
 ##### 3. Download [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/) v5.1.45 and copy the jar to `<DOCKERFILE_HOME>/base/files`
 
@@ -73,6 +73,10 @@ add it the base image's classpath:
 - For Worker, navigate to `<DOCKERFILE_HOME>/worker` directory. <br>
   Execute `docker build` command as shown below. 
     + `docker build -t wso2sp-worker:4.3.0 .`
+- For Extended Worker, navigate to `<DOCKERFILE_HOME>/worker-extended` directory. <br>
+  Copy the extension JARs to `custom-lib` folder (same level as Dockerfile). <br>
+  Execute `docker build` command as shown below. 
+    + `docker build -t wso2sp-worker:4.3.0_extended .`
     
 ##### 6. Running Docker images specific to each profile.
 - For Dashboard,
@@ -82,7 +86,7 @@ add it the base image's classpath:
 - For Manager,
     + `docker run -it wso2sp-manager:4.3.0`
 - For Worker,
-    + `docker run -it wso2sp-worker:4.3.0`
+    + `docker run -it wso2sp-worker:4.3.0_extended`
 
 ##### 7. Accessing management console per each profile.
 - For Dashboard,
