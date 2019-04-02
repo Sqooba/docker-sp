@@ -73,6 +73,7 @@ COPY --chown=wso2carbon:wso2 ${FILES}/scala_parser_combinators_2.11_1.0.4_1.0.0.
 COPY --chown=wso2carbon:wso2 ${FILES}/zkclient_0.8_1.0.0.jar ${USER_HOME}/${WSO2_SERVER_PACK}/lib/
 COPY --chown=wso2carbon:wso2 ${FILES}/zookeeper_3.4.6_1.0.0.jar ${USER_HOME}/${WSO2_SERVER_PACK}/lib/
 COPY --chown=wso2carbon:wso2 ${FILES}/mysql-connector-java-5.1.45-bin.jar ${USER_HOME}/${WSO2_SERVER_PACK}/lib/
+COPY --chown=wso2carbon:wso2 ${FILES}/mssql-jdbc-6.4.0.jre8.jar ${USER_HOME}/${WSO2_SERVER_PACK}/lib/
 
 # set the user and work directory
 USER ${USER}
